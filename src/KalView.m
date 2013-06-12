@@ -57,14 +57,29 @@ static const CGFloat kMonthLabelHeight = 17.f;
 
 - (void)showPreviousMonth
 {
-  if (!gridView.transitioning)
-    [delegate showPreviousMonth];
+    
+    if (!gridView.transitioning)
+        [delegate showPreviousMonth];
+    [self blockScrollInTableView];
 }
 
 - (void)showFollowingMonth
 {
-  if (!gridView.transitioning)
-    [delegate showFollowingMonth];
+    
+    if (!gridView.transitioning)
+        [delegate showFollowingMonth];
+    [self blockScrollInTableView];
+}
+
+- (void)blockScrollInTableView
+{
+    //iPhone 4
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
+    if (screenHeight == 480){
+        if (gridView.frame.size.height < 230) [self.tableView setScrollEnabled:NO];
+        else [self.tableView setScrollEnabled:YES];
+    }
 }
 
 - (void)addSubviewsToHeaderView:(UIView *)headerView
