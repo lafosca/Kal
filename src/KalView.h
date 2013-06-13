@@ -62,7 +62,8 @@
 - (void)slideDown;
 - (void)slideUp;
 - (void)jumpToSelectedMonth;    // change months without animation (i.e. when directly switching to "Today")
-
+//Method to check if we should block tableview scrollview (when it fits on the screen)
+- (void)blockScrollInTableView;
 @end
 
 #pragma mark -

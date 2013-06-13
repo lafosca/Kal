@@ -8,7 +8,7 @@
 #
 Pod::Spec.new do |s|
    s.name         = "Kal"
-  s.version      = "1.2.4"
+  s.version      = "1.2.5"
   s.summary      = "A calendar component for the iPhone (the UI is designed to match MobileCal)."
   s.description  = <<-DESC
 		This project aims to provide an open-source implementation of the month view in Apple's mobile calendar app (MobileCal). When the user taps a day on the calendar, any associated data for that day will be displayed in a table view directly below the calendar. As a client of the Kal component, you have 2 responsibilities:
@@ -31,7 +31,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
      LICENSE
   }
   s.author       = { "Keith Lazuka" => "klazuka@gmail.com" }
-  s.source       = { :git => "https://github.com/lafosca/Kal.git", :tag => "1.2.4" }
+  s.source       = { :git => "https://github.com/lafosca/Kal.git", :tag => "1.2.5" }
   s.platform     = :ios, '4.0'
   s.source_files = 'src/*.{h,m}'
   s.resources = 'src/assets/*.png'
